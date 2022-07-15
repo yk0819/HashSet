@@ -1,0 +1,24 @@
+import ch10.Member;
+
+public class MemberHashSetTest {
+
+	public static void main(String[] args) {
+		
+	MemberHashSet memberHashSet = new MemberHashSet();
+	
+	Member memberUnjo = new Member(809, "運上弘菜");
+	Member memberTanaka = new Member(912, "田中美久");
+	Member memberKitahara = new Member(624, "北原里英");
+	
+	memberHashSet.addMember(memberUnjo);
+	memberHashSet.addMember(memberKitahara);
+	memberHashSet.addMember(memberTanaka);
+	
+	Member memberSakai = new Member(624, "堺萌香"); // id 중복
+	memberHashSet.addMember(memberSakai);
+	// 중복여부를 직접 체크해주어야 한다
+	
+	memberHashSet.showAllMember();
+	
+	}
+}
